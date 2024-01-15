@@ -19,7 +19,7 @@ const getCoinData = () => {
     if(!input.trim()){
         alert("Input cannot be blank.")
     } else {
-        apiRequest()
+        apiRequest(input)
     }
 }
 
