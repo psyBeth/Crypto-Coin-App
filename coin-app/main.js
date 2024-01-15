@@ -19,10 +19,14 @@ const getCoinData = async () => {
     const options = { headers: { 'x-access-token': 'API_KEY' } };
 
     const url = `https://api.coinranking.com/v2/coins?search=${input}`
-
-    const res = await fetch(url, options)
-    const data = await res.json()
-    console.log(json.data.coins);
+    
+    try{
+        const res = await fetch(url, options)
+        const data = await res.json()
+        console.log(json.data.coins[0]);
+    } catch (error){
+        console.log(error);
+    }
 }
 
 
