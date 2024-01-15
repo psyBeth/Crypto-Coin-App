@@ -21,7 +21,8 @@ const getCoinData = async () => {
     const url = `https://api.coinranking.com/v2/coins?search=${input}`
 
     const res = await fetch(url, options)
-    console.log(res);
+    const data = await res.json()
+    console.log(data.data);
 }
 
 
