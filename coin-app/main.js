@@ -22,7 +22,7 @@ const getCoinData = async () => {
 
     const res = await fetch(url, options)
     const data = await res.json()
-    console.log(data.data);
+    console.log(json.data.coins);
 }
 
 
