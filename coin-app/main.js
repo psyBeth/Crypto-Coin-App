@@ -9,16 +9,19 @@ const form = document.querySelector("header form")
 form.addEventListener("submit", (e)=> {
     console.log(e.target);
     e.preventDefault()  //? prevent all the submits
-    e.target.reset()    //? deleting the form
-    getCoinData()
+    getCoinData() //? API request
+    e.target.reset()    //? delete the form
 })
 
 const getCoinData = async () => {
+    const input = document.querySelector("header form input").value
     const API_KEY = "coinranking734f14b6d044ed7b30d43d513756abfe54db3b39dc88ddc2"
     const options = { headers: { 'x-access-token': 'API_KEY' } };
 
-    url = "https://api.coinranking.com/v2/coins?search=bitcoin"
+    const url = `https://api.coinranking.com/v2/coins?search=${input}`
 
-    const res = await fetch()
+    const res = await fetch(url, options)
+    console.log(res);
 }
+
 
