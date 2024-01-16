@@ -1,6 +1,7 @@
 import { renderCoins } from "./renderData";
 
 export const apiRequest = async () => {
+    const input = document.querySelector("header form input").value
     const API_KEY = "coinranking734f14b6d044ed7b30d43d513756abfe54db3b39dc88ddc2"
     const options = { headers: { 'x-access-token': 'API_KEY' } };
 

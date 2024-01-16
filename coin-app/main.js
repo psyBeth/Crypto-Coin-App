@@ -16,6 +16,7 @@ const getCoinData = () => {
     if(!input.trim()){
         alert("Input cannot be blank.")
     } else {
+        const input = document.querySelector("header form input").value
         apiRequest(input)
     }
 }
