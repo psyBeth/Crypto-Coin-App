@@ -2,7 +2,7 @@ import { renderCoins } from "./renderData";
 
 export const apiRequest = async () => {
     const input = document.querySelector("header form input").value
-    const API_KEY = "coinranking734f14b6d044ed7b30d43d513756abfe54db3b39dc88ddc2"
+    const API_KEY = "coinranking7ccb2f8ad895d7e07946af5421aa51052c90962d689459af"
     const options = { headers: { 'x-access-token': 'API_KEY' } };
 
     const url = `https://api.coinranking.com/v2/coins?search=${input}`
