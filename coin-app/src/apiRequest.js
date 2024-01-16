@@ -1,3 +1,5 @@
+import { renderCoins } from "./renderData";
+
 export const apiRequest = async () => {
     const API_KEY = "coinranking734f14b6d044ed7b30d43d513756abfe54db3b39dc88ddc2"
     const options = { headers: { 'x-access-token': 'API_KEY' } };
@@ -10,7 +12,8 @@ export const apiRequest = async () => {
         if (json.data.coins.length === 0){
             alert("Coin cannot be found.")
         } else {
-        console.log(json.data.coins[0]);
+        // console.log(json.data.coins[0]);
+        renderCoins(json.data.coins[0])
         }
     } catch (error){
         console.log(error);
