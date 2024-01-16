@@ -7,6 +7,10 @@ export const renderCoins = (coin) => {
     <div class="remove-icon">
         <i class="fas fa-window-close"></i>
     </div>
+    <h2 class="coin-name">
+        <span>${name}</span>
+        <span>${symbol}</span>
+    </h2>
     `
     coinsUl.append(newCoinLi)
 }
