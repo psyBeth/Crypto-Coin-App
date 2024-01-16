@@ -7,7 +7,11 @@ export const apiRequest = async () => {
     try{
         const res = await fetch(url, options)
         const data = await res.json()
+        if (json.data.coins.length === 0){
+            alert("Coin cannot be found.")
+        } else {
         console.log(json.data.coins[0]);
+        }
     } catch (error){
         console.log(error);
     }
