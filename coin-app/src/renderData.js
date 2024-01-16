@@ -23,4 +23,8 @@ export const renderCoins = (coin) => {
     </figure>
     `
     coinsUl.append(newCoinLi)
+
+    newCoinLi.querySelector(".remove-icon").addEventListener("click", () => {
+        newCoinLi.remove()
+    })
 }
